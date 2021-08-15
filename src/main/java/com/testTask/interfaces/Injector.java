@@ -1,5 +1,8 @@
 package com.testTask.interfaces;
 
+import com.testTask.exception.ConstructorNotFoundException;
+import com.testTask.exception.TooManyConstructorsException;
+
 public interface Injector {
 
     /**
@@ -20,7 +23,7 @@ public interface Injector {
      * @param impl - class object reference
      * @return - class instance
      */
-    <T> void bind(Class<T> intf, Class<? extends T> impl);
+    <T> void bind(Class<T> intf, Class<? extends T> impl) ;
 
 
     /**
